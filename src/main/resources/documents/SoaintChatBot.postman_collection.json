@@ -1,0 +1,169 @@
+{
+	"id": "9e3368ce-1764-3e61-604f-e59ba11f3b1b",
+	"name": "SoaintChatBot",
+	"description": "",
+	"order": [
+		"ca88b62c-6199-e3c3-b333-dc212feffd0f",
+		"640c347a-7fa8-2ea2-7ad1-2fa1e5759b69",
+		"5ce1fe70-2fab-214f-92c5-f1917c8f5539"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1579810514772,
+	"owner": "2986849",
+	"public": false,
+	"requests": [
+		{
+			"id": "5ce1fe70-2fab-214f-92c5-f1917c8f5539",
+			"headers": "Content-Type: application/json\nOrigin: http://localhost:8080\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Origin",
+					"value": "http://localhost:8080",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/v1/bot/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1583264820994,
+			"name": "Login",
+			"description": "",
+			"collectionId": "9e3368ce-1764-3e61-604f-e59ba11f3b1b",
+			"responses": [],
+			"rawModeData": "{\n    \"username\": \"admin\",\n    \"password\": \"password\"\n}"
+		},
+		{
+			"id": "640c347a-7fa8-2ea2-7ad1-2fa1e5759b69",
+			"headers": "Authorization: Basic c29haW50LWNsaWVudDokMmEkMDQkZS9jMS9SZnNXdVRoYVdGQ3JjQ3VKZW95dndDVjBVUk4vNlBuOVpGbHJ0SVdhVS92ai9CZkc=\nOrigin: http://localhost:8084\nContent-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic c29haW50LWNsaWVudDokMmEkMDQkZS9jMS9SZnNXdVRoYVdGQ3JjQ3VKZW95dndDVjBVUk4vNlBuOVpGbHJ0SVdhVS92ai9CZkc=",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Origin",
+					"value": "http://localhost:8084",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/v1/auth/token",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "username",
+					"value": "admin",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "password",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "grant_type",
+					"value": "password",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "basicAuth",
+			"helperAttributes": {
+				"id": "basic",
+				"username": "soaint-client",
+				"password": "$2a$04$e/c1/RfsWuThaWFCrcCuJeoyvwCV0URN/6Pn9ZFlrtIWaU/vj/BfG",
+				"saveToRequest": true
+			},
+			"time": 1583264823910,
+			"name": "Get TOKEN",
+			"description": "",
+			"collectionId": "9e3368ce-1764-3e61-604f-e59ba11f3b1b",
+			"responses": []
+		},
+		{
+			"id": "ca88b62c-6199-e3c3-b333-dc212feffd0f",
+			"headers": "Origin: http://localhost:8087\nAuthorization: Bearer eyJhb6ciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic3ByaW5nLWJvb3QtYXBwbGljYXRpb24iXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJzY29wZV9yZWFkIiwic2NvcGVfd3JpdGUiXSwiZXhwIjoxNTgxNjAyNDQzLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIl0sImp0aSI6Ijg1ZTQ2MGYxLTdlODUtNGRiMC1iNzZhLTFhYjAxMTQ2MmRhYiIsImNsaWVudF9pZCI6InNvYWludC1jbGllbnQifQ.iewZbbpXdbkmHGxHP6C-qjLNMETk_OFm4-m9uzBbGBo\nContent-Type: text/plain\n",
+			"headerData": [
+				{
+					"key": "Origin",
+					"value": "http://localhost:8087",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJhb6ciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsic3ByaW5nLWJvb3QtYXBwbGljYXRpb24iXSwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJzY29wZV9yZWFkIiwic2NvcGVfd3JpdGUiXSwiZXhwIjoxNTgxNjAyNDQzLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIl0sImp0aSI6Ijg1ZTQ2MGYxLTdlODUtNGRiMC1iNzZhLTFhYjAxMTQ2MmRhYiIsImNsaWVudF9pZCI6InNvYWludC1jbGllbnQifQ.iewZbbpXdbkmHGxHP6C-qjLNMETk_OFm4-m9uzBbGBo",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "text/plain",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/v1/bot/botQuestion?question=servicios soaint",
+			"queryParams": [
+				{
+					"key": "question",
+					"value": "servicios soaint",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1583264826347,
+			"name": "http://localhost:8080/api/v1/bot/botAnswer",
+			"description": "",
+			"collectionId": "9e3368ce-1764-3e61-604f-e59ba11f3b1b",
+			"responses": []
+		}
+	]
+}
